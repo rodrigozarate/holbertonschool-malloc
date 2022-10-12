@@ -3,7 +3,6 @@
 #include <stdio.h>
 
 
-
 #ifdef ALIGN
 #undef ALIGN
 #define ALIGN sizeof(void *)
@@ -76,7 +75,7 @@ int findFblock(void *addr0, size_t *size, size_t usedBcount,
 
 	while (*freeBsize < (sizeof(size_t) * 2) + *size)
 	{
-		if (addPageToHeap() == NULL)
+		if (putPageH() == NULL)
 			return (1);
 		*freeBsize += pgSize;
 		*((size_t *)*freeBaddr) = *freeBsize;
@@ -99,7 +98,7 @@ void *naive_malloc(size_t size)
 
 	if (!addr0)
 	{
-		addr0 = addPageToHeap();
+		addr0 = putPageH();
 		if (addr0 == NULL)
 			return (NULL);
 	}
