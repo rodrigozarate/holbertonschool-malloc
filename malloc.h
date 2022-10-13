@@ -3,6 +3,8 @@
 
 #include <stddef.h>
 #include <stdint.h>
+#include <stdio.h>
+#include <unistd.h>
 
 #define ALIGN (2 * sizeof(void *))
 #define HEADER_SZ (sizeof(size_t) * 2)
