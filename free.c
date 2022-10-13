@@ -1,5 +1,7 @@
 #include "malloc.h"
 
+static block_t *first_free_blk;
+
 /**
  * joinFreeBlocks - join free blocks
  */
