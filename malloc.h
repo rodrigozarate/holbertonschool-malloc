@@ -36,5 +36,7 @@ block_t *newFreeBlock(size_t algnd_pyld_sz);
 void freeListAdd(block_t *blk);
 void freeListRemove(block_t *blk);
 block_t *splitFreeBlock(block_t *free_blk, size_t size);
+void _free(void *ptr);
+void joinFreeBlocks(void);
 
 #endif /* HOLBI_MALLOC */
