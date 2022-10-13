@@ -68,9 +68,8 @@ void printFreeList(char *prefix)
 
 /**
  * _malloc - my malloc
- *
  * @size: size  in bytes
- * Return: pointer 
+ * Return: pointer
  */
 void *_malloc(size_t size)
 {
