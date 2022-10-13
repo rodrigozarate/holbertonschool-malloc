@@ -111,7 +111,7 @@ void *naive_malloc(size_t size)
 	}
 
 	if (findFblock(addr0, &size, usedBcount,
-			    &freeBaddr, freeBsize) == 1)
+			    &freeBaddr, &freeBsize) == 1)
 		return (NULL);
 
 	newBaddr = freeBaddr;
